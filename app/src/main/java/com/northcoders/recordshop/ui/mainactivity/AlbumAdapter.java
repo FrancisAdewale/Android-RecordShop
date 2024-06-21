@@ -57,7 +57,5 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
             super(albumItemBinding.getRoot());
             this.albumItemBinding = albumItemBinding;
         }
-
-
     }
 }

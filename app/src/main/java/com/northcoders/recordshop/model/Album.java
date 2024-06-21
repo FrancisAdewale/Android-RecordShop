@@ -11,8 +11,8 @@ public class Album extends BaseObservable {
     public String artistName;
     public String genre;
     public String releaseDate;
-    public int price;
-    public int stockQuantity;
+    public String price;
+    public String stockQuantity;
 
     public Album() {
     }
@@ -23,8 +23,8 @@ public class Album extends BaseObservable {
             String artistName,
             String genre,
             String releaseDate,
-            int price,
-            int stockQuantity) {
+            String price,
+            String stockQuantity) {
 
         this.albumId = albumId;
         this.albumTitle = albumTitle;
@@ -91,22 +91,22 @@ public class Album extends BaseObservable {
     }
 
     @Bindable
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
         notifyPropertyChanged(BR.price);
 
     }
 
     @Bindable
-    public int getStockQuantity() {
+    public String getStockQuantity() {
         return stockQuantity;
     }
 
-    public void setStockQuantity(int stockQuantity) {
+    public void setStockQuantity(String stockQuantity) {
         this.stockQuantity = stockQuantity;
         notifyPropertyChanged(BR.stockQuantity);
     }
