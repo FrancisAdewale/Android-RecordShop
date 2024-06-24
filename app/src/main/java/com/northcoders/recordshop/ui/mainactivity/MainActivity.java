@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
             @Override
             public void onChanged(List<Album> albums) {
                 albumArrayList = (ArrayList<Album>) albums;
-                Log.i("aLBUM tITLE", albumArrayList.get(0).albumTitle);
                 displayInRecyclerView();
             }
         });

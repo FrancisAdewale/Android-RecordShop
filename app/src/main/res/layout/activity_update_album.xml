@@ -36,6 +36,7 @@
             android:gravity="center"
             android:layout_marginTop="100dp"
 
+
     />
 
     <EditText
@@ -87,6 +88,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_genre"
+            app:layout_constraintBottom_toTopOf="@id/et_stockQuantity"
             android:gravity="center"
 
     />
@@ -95,10 +97,11 @@
             android:id="@+id/et_stockQuantity"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="@={album.price}"
+            android:text="@={album.stockQuantity}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_price"
+            app:layout_constraintBottom_toTopOf="@id/btn_updateBook"
             android:gravity="center"
 
     />
@@ -111,7 +114,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_deleteBook"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="Update Book"
+        android:text="Update Album"
 
     />
 
@@ -123,7 +126,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="Delete Book"
+            android:text="Delete Album"
             android:layout_marginBottom="100dp"
 
     />
