@@ -1,6 +1,5 @@
-package com.northcoders.recordshop;
+package com.northcoders.recordshop.ui.mainactivity;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +7,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import com.northcoders.recordshop.R;
 import com.northcoders.recordshop.databinding.ActivityMainBinding;
 import com.northcoders.recordshop.model.Album;
-import com.northcoders.recordshop.ui.mainactivity.AlbumAdapter;
-import com.northcoders.recordshop.ui.mainactivity.MainActivityViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

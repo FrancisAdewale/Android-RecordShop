@@ -2,9 +2,7 @@ package com.northcoders.recordshop.service;
 
 import com.northcoders.recordshop.model.Album;
 import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
+import retrofit2.http.*;
 
 import java.util.List;
 
@@ -15,4 +13,12 @@ public interface AlbumApiService {
 
     @POST("albums")
     Call<Album> postAlbum(@Body Album album);
+
+    @PUT("albums/{id}")
+    Call<Album> updateAlbum(long id, @Body Album album);
+
+    @DELETE("albums/{id}")
+    Call<Album> deleteAlbum(long id);
+
+
 }

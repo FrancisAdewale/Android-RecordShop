@@ -65,4 +65,46 @@ public class AlbumRepo {
         });
 
     }
+
+    public void updateMutableLiveData(long id, Album album) {
+        AlbumApiService albumApiService = RetrofitInstance.getService();
+        Call<Album> call = albumApiService.updateAlbum(id, album);
+        call.enqueue(new Callback<Album>() {
+            @Override
+            public void onResponse(Call<Album> call, Response<Album> response) {
+                Toast.makeText(application.getApplicationContext(),
+                        "Updated Album",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Album> call, Throwable throwable) {
+                Toast.makeText(application.getApplicationContext(),
+                        "Updated Album Failed",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+    }
+
+    public void deleteMutableLiveData(long id) {
+        AlbumApiService albumApiService = RetrofitInstance.getService();
+        Call<Album> call = albumApiService.deleteAlbum(id);
+        call.enqueue(new Callback<Album>() {
+            @Override
+            public void onResponse(Call<Album> call, Response<Album> response) {
+                Toast.makeText(application.getApplicationContext(),
+                        "Album Deleted",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onFailure(Call<Album> call, Throwable throwable) {
+
+            }
+        });
+    }
 }

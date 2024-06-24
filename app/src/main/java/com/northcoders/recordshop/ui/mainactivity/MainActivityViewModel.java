@@ -25,4 +25,13 @@ public class MainActivityViewModel extends AndroidViewModel {
     public void postAlbum(Album album) {
         albumRepo.setMutableLiveData(album);
     }
+    
+    public void updateAlbum(long id, Album album) {
+        albumRepo.updateMutableLiveData(id, album);
+    }
+
+    public void deleteAlbum(long id){
+        albumRepo.deleteMutableLiveData(id);
+    }
+
 }
