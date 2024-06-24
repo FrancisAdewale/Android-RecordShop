@@ -42,11 +42,7 @@ public class UpdateAlbumActivity extends AppCompatActivity {
 
         binding.setAlbum(album);
 
-        clickHandler.onUpdate(binding.btnUpdateBook);
-        clickHandler.onDelete(binding.btnDeleteBook);
-        clickHandler.onReturn(binding.fab);
-
-
+        binding.setClickHandler(clickHandler);
 
 
 
